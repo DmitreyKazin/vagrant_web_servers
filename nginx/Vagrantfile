@@ -1,0 +1,11 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  # Ubuntu 18.04
+  config.vm.box = "hashicorp/bionic64"
+  # forward point configuration
+  config.vm.network "forwarded_port", guest: 80, host: 8080
+  # enviorment setup
+  config.vm.provision :shell, path: "bootstrap.sh"
+end

@@ -1,0 +1,1 @@
+Running BATCH files except failes as it changes directory where I replace my projects on my PC. 
